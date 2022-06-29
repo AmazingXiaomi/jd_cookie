@@ -1204,7 +1204,7 @@ func tytCoupon(cookie string, state chan string) {
 		if num == 0 {
 			rt = "无"
 		} else {
-			rt = fmt.Sprintf("%d张5元优惠券(今天过期)", num)
+			rt = fmt.Sprintf("%d张5大洋优惠券(今天过期)", num)
 		}
 	}
 	state <- rt

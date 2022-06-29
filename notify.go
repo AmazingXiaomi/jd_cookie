@@ -567,44 +567,44 @@ func (ck *JdCookie) QueryAsset() string {
 				return ""
 			}
 			if asset.RedPacket.Total != 0 {
-				msgs = append(msgs, fmt.Sprintf("所有红包：%.2f%s元🧧", asset.RedPacket.Total, e(asset.RedPacket.ToExpire)))
+				msgs = append(msgs, fmt.Sprintf("所有red包：%.2f%s大洋🧧", asset.RedPacket.Total, e(asset.RedPacket.ToExpire)))
 				if asset.RedPacket.Jx != 0 {
-					msgs = append(msgs, fmt.Sprintf("京喜红包：%.2f%s元", asset.RedPacket.Jx, e(asset.RedPacket.ToExpireJx)))
+					msgs = append(msgs, fmt.Sprintf("京喜red包：%.2f%s大洋", asset.RedPacket.Jx, e(asset.RedPacket.ToExpireJx)))
 				}
 				if asset.RedPacket.Js != 0 {
-					msgs = append(msgs, fmt.Sprintf("极速红包：%.2f%s元", asset.RedPacket.Js, e(asset.RedPacket.ToExpireJs)))
+					msgs = append(msgs, fmt.Sprintf("极速red包：%.2f%s大洋", asset.RedPacket.Js, e(asset.RedPacket.ToExpireJs)))
 				}
 				if asset.RedPacket.Jd != 0 {
-					msgs = append(msgs, fmt.Sprintf("京东红包：%.2f%s元", asset.RedPacket.Jd, e(asset.RedPacket.ToExpireJd)))
+					msgs = append(msgs, fmt.Sprintf("京东red包：%.2f%s大洋", asset.RedPacket.Jd, e(asset.RedPacket.ToExpireJd)))
 				}
 				if asset.RedPacket.Jk != 0 {
-					msgs = append(msgs, fmt.Sprintf("健康红包：%.2f%s元", asset.RedPacket.Jk, e(asset.RedPacket.ToExpireJk)))
+					msgs = append(msgs, fmt.Sprintf("健康red包：%.2f%s大洋", asset.RedPacket.Jk, e(asset.RedPacket.ToExpireJk)))
 				}
 			}
 
 		} else {
-			// msgs = append(msgs, "暂无红包数据🧧")
+			// msgs = append(msgs, "暂无red包数据🧧")
 		}
 		msgs = append(msgs, fmt.Sprintf("东东农场：%s", <-fruit))
 		msgs = append(msgs, fmt.Sprintf("东东萌宠：%s", <-pet))
 
 		msgs = append(msgs, fmt.Sprintf("京东试用：%s", <-sysp))
 
-		msgs = append(msgs, fmt.Sprintf("金融金贴：%s元💰", <-jrjt))
+		msgs = append(msgs, fmt.Sprintf("金融金贴：%s大洋💰", <-jrjt))
 
 		gn := <-gold
 		// if gn >= 30000 {
-		msgs = append(msgs, fmt.Sprintf("极速金币：%d(≈%.2f元)💰", gn, float64(gn)/10000))
+		msgs = append(msgs, fmt.Sprintf("极速金bi：%d(≈%.2f大洋)💰", gn, float64(gn)/10000))
 		// }
 		zjbn := <-zjb
 		// if zjbn >= 50000 {
-		msgs = append(msgs, fmt.Sprintf("京东赚赚：%d金币(≈%.2f元)💰", zjbn, float64(zjbn)/10000))
+		msgs = append(msgs, fmt.Sprintf("京东赚赚：%d金bi(≈%.2f大洋)💰", zjbn, float64(zjbn)/10000))
 		// } else {
 		// msgs = append(msgs, fmt.Sprintf("京东赚赚：暂无数据"))
 		// }
 		mmcCoin := <-mmc
 		// if mmcCoin >= 3000 {
-		msgs = append(msgs, fmt.Sprintf("京东秒杀：%d秒秒币(≈%.2f元)💰", mmcCoin, float64(mmcCoin)/1000))
+		msgs = append(msgs, fmt.Sprintf("京东秒杀：%d秒秒币(≈%.2f大洋)💰", mmcCoin, float64(mmcCoin)/1000))
 		// } else {
 		// msgs = append(msgs, fmt.Sprintf("京东秒杀：暂无数据"))
 		// }
